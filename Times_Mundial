@@ -1,0 +1,32 @@
+using static System.Console;
+using static System.Convert;
+					
+namespace Program
+{
+	class Times_Mundial
+	{
+		public static void Main()
+		{
+			//declarando variáveis
+			string team1, team2;
+			int mund1, mund2;
+			
+			//obtendo dados
+			WriteLine("Insira o nome do primeiro time.");
+			team1 = ReadLine();
+			WriteLine("Insira o nome do segundo time.");
+			team2 = ReadLine();
+			WriteLine("Insira a quantidade de mundiais FIFA do primeiro time.");
+			mund1 = ToInt16(ReadLine());
+			WriteLine("Insira a quantidade de mundiais FIFA do segundo time.");
+			mund2 = ToInt16(ReadLine());
+			
+			//operações
+			if (mund1 > mund2) {Write($"O {team1} é maior que {team2}.");}
+			
+			else if (mund2 > mund1) {Write($"O {team2} é maior que {team1}.");}
+			
+			else {Write("Os dois times são pequenos");}
+		}
+	}
+}
